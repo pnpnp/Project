@@ -1,2 +1,3 @@
 https://coderanch.com/t/612267/java/Comparing-user-inputs-received-data
 
+https://www.codeproject.com/Questions/252779/Compare-textfield-value-with-database-value

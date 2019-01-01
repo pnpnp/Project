@@ -1,6 +1,8 @@
 package com.project1;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable{
 	
 	String account_id;
 	String account_type;

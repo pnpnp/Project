@@ -9,10 +9,16 @@ public class CustomerTest {
 		//cust.setCustomer_fname("Pratik");
 		//Customer cust = new Customer("Pratik", acc);
 		
+		Loan loan = new Loan("123",LoanType.Salary,50000);
+		
 		Customer cust = new Customer();
 		cust.setCustomer_fname("Pratik") ;
 		cust.setAccount(acc);
+		cust.setLoan(loan);
 		System.out.println(cust);
+		
+		
+		
 		
 		
 				

@@ -1,8 +1,9 @@
 package com.project1;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Customer {
+public class Customer implements Serializable{
 	String customer_fname;
 	String customer_mname;
 	String customer_lname;
@@ -13,7 +14,15 @@ public class Customer {
 	double customer_adhaar;
 	String customer_panno;
 	//String customer_accountno;
+	//customer id and password??
 	Account account;
+	Loan loan;
+	public Loan getLoan() {
+		return loan;
+	}
+	public void setLoan(Loan loan) {
+		this.loan = loan;
+	}
 	public String getCustomer_fname() {
 		return customer_fname;
 	}
@@ -76,13 +85,8 @@ public class Customer {
 	public void setAccount(Account account) {
 		this.account = account;
 	}
-	@Override
-	public String toString() {
-		return "Customer [customer_fname=" + customer_fname + ", customer_mname=" + customer_mname + ", customer_lname="
-				+ customer_lname + ", customer_email=" + customer_email + ", customer_phoneno=" + customer_phoneno
-				+ ", customer_dob=" + customer_dob + ", customer_gender=" + customer_gender + ", customer_adhaar="
-				+ customer_adhaar + ", customer_panno=" + customer_panno + ", account=" + account + "]";
-	}
+	
+	
 //	public Customer(String customer_fname, String customer_mname, String customer_lname, String customer_email,
 //			String customer_phoneno, Date customer_dob, String customer_gender, double customer_adhaar,
 //			String customer_panno, Account account) {
@@ -108,8 +112,17 @@ public class Customer {
 		this.customer_fname = customer_fname;
 		
 		this.account = account;
+		this.loan=loan;
 	}
-	
+	@Override
+	public String toString() {
+		return "Customer [customer_fname=" + customer_fname + ", customer_mname=" + customer_mname + ", customer_lname="
+				+ customer_lname + ", customer_email=" + customer_email + ", customer_phoneno=" + customer_phoneno
+				+ ", customer_dob=" + customer_dob + ", customer_gender=" + customer_gender + ", customer_adhaar="
+				+ customer_adhaar + ", customer_panno=" + customer_panno + ", account=" + account + ", loan=" + loan
+				+ "]";
+	}
+
 	
 	
 }
